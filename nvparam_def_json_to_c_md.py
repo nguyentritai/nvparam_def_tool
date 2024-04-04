@@ -19,8 +19,8 @@ def param_md_content_gen(params):
         param_hdr_anchor = str.lower(param['Name'])
         md_param_tbl_text += f"|{param['Index']}|[{param['Name']}](#{param_hdr_anchor})|{param['Description']}|\n"
         # On gitlab, header anchors are generated automatically, so make sure header text is unique
-        md_fld_text += f"## {param['Name']} {{#{param_hdr_anchor}}}\n"
-        # md_fld_text += f"## {param['Name']}"
+        # md_fld_text += f"## {param['Name']} {{#{param_hdr_anchor}}}\n"
+        md_fld_text += f"## {param['Name']}\n"
         md_fld_text += f"- **NV Parameter Index**: {param['Index']}\n"
         md_fld_text += f"- **Category**: {param['Category']}\n"
         md_fld_text += f"- **Description**: {param['Description']}\n"
